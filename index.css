@@ -464,12 +464,16 @@ input[type=number] {
     margin-bottom: 15px;
 }
 
-#input-phone-num:not(.hidden) {
-    display: flex;
+#input-phone-num {
     align-items: center;
     gap: 10px;
     color: rgba(255, 255, 255, 0.8);
     font-weight: 500;
+}
+
+/* When shown via JavaScript (style.display = "block"), apply flex */
+#input-phone-num[style*="block"] {
+    display: flex !important;
 }
 
 #input-phone-num #country-code {
